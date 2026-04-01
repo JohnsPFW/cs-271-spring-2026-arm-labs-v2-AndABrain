@@ -115,8 +115,8 @@ Binary (32-bit): 0101 0100 1111 1111 1111 1111 1010 0001
 | 01010100 |1111111111111111101| 0 | 0001 | 
 
 - `imm19` (binary) = 1111111111111111101
-- `imm19` as a two's complement integer = -3 (0000000000000000011) (should be negative since MSB of initial binary was 1) 
--  Byte offset (imm19 × 4) = -12
+- `imm19` as a two's complement integer = -3 (0000000000000000011; inverted bits and added one) (should be negative since MSB of initial binary was 1) 
+-  Byte offset (imm19 × 4) = -3 * 4 = -12
 - `B.NE` branch instruction address = 0x1C (address of the branch instruction found by looking at the line in which B.NE is located on in .log file)
 - `B.NE` address (from disassembly) (as in the branches target address) = 0x1C - 0x0C (hex of -12) = 0x10 = 16 (target address for B.NE jump)
 - `sum_loop` address (from disassembly) = 0x10 = 16 (found by looking at the .log file's value attributed with sum_loop)
