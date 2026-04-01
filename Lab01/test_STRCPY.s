@@ -32,6 +32,8 @@ _start:
     MOVZ    X4, #0          // Running sum
     MOVZ    X5, #0          // Iteration counter
 
+    CMP X0, X1
+
     // =========================================================================
     // STEP 2: Implement the Counted Loop (YOUR CODE GOES HERE)
     // =========================================================================
@@ -51,7 +53,7 @@ sum_loop:
     // Syntax: ADD Xd, Xn, Xm
 
     // YOUR CODE HERE
-    ADD X4, X0, X4
+    ADD X4, X4, X0
 
     // TODO #2: Increment the iteration count in X5 using X1
     // Syntax: ADD Xd, Xn, Xm
