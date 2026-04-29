@@ -2,8 +2,8 @@
 // CS 271 Computer Architecture - Lab 00: Introduction to ARM Assembly
 // Purdue University Fort Wayne
 // =============================================================================
-// STUDENT NAME: ___________________
-// DATE:         ___________________
+// STUDENT NAME: _Andew Brain_
+// DATE:         _1/21/2026_
 // =============================================================================
 //
 // LEARNING OBJECTIVES:
@@ -51,7 +51,8 @@ _start:
     // After this instruction, X3 should equal 25
     //
     // YOUR CODE HERE:
-
+    // Notes: Not case sensitive
+    mov x3, #25
 
     // -------------------------------------------------------------------------
     // EXERCISE 2: Perform addition
@@ -60,7 +61,8 @@ _start:
     // After this instruction, X4 should equal 40 (because 15 + 25 = 40)
     //
     // YOUR CODE HERE:
-
+    // Notes: add targetRegister, addedReg1, addedReg2, ... , addedRegn
+    add X4, X2, X3
 
     // -------------------------------------------------------------------------
     // EXERCISE 3: Perform subtraction
@@ -70,7 +72,7 @@ _start:
     // After this instruction, X5 should equal 5 (because 10 - 5 = 5)
     //
     // YOUR CODE HERE:
-
+    SUB X5, X0, X1
 
     // -------------------------------------------------------------------------
     // EXERCISE 4: Create your own calculation
@@ -80,7 +82,10 @@ _start:
     // After your code, X6 MUST equal exactly 100 for the autograder to pass.
     //
     // YOUR CODE HERE:
-
+    // 100 50 25 
+    MOV X7, X3
+    ADD X7, X7, X7
+    ADD X6, X7, X7
 
     // =========================================================================
     // PROGRAM TERMINATION
